@@ -12,6 +12,7 @@ listint_t *insert_node(listint_t **head, int number)
 {
 	listint_t *new;
 	listint_t *current;
+	int i = 0;
 
 	current = *head;
 
@@ -28,7 +29,7 @@ listint_t *insert_node(listint_t **head, int number)
 	}
 	else
 	{
-		for (int i = 0; i < 5; i++)
+		for (i = 0; i < 5; i++)
 		{
 			current = current->next;
 		}
