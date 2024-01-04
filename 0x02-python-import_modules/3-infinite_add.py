@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 import argparse
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('num', nargs='*', type=int)
@@ -8,6 +10,7 @@ def main():
     for i in args.num:
         sum += i
     print("{}".format(sum))
+
 
 if __name__ == '__main__':
     main()
