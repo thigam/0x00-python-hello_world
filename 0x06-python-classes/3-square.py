@@ -3,6 +3,7 @@
 A module demonstrating private attributes
 """
 
+
 class Square:
     """A class defining properties for squares
 

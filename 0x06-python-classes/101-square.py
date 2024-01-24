@@ -3,6 +3,7 @@
 A module demonstrating private attributes and accessing and modifying them
 """
 
+
 class Square:
     """A class defining properties for squares
 
@@ -11,7 +12,7 @@ class Square:
         __posiiton (int, int): The coordinates of the square
     """
 
-    def __init__(self, size=0, position = (0,0)):
+    def __init__(self, size=0, position=(0, 0)):
         """
         Initializes a new sqaure
 
@@ -26,7 +27,7 @@ class Square:
         Returns the area of the square
         """
         return self.__size * self.__size
-    
+
     @property
     def size(self):
         """

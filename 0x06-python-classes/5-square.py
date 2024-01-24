@@ -3,6 +3,7 @@
 A module demonstrating private attributes and accessing and modifying them
 """
 
+
 class Square:
     """A class defining properties for squares
 
@@ -24,7 +25,7 @@ class Square:
         Returns the area of the square
         """
         return self.__size * self.__size
-    
+
     @property
     def size(self):
         """
