@@ -11,8 +11,6 @@ def add_integer(a, b=98):
     Return:
         Sum (int)
     """
-    if a is None:
-        raise ValueError("missing integer a")
     if isinstance(a, float):
         a = int(a)
     elif not isinstance(a, int):

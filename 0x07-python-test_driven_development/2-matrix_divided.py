@@ -21,6 +21,8 @@ def matrix_divided(matrix, div):
     new_matrix = [[i for i in row] for row in matrix]
     for j in range(len(matrix)):
         for i in range(len(matrix[j])):
+            if not isinstance(matrix[j][i], int) and not isinstance(matrix[j][i], float):
+                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
             new_matrix[j][i] = round(matrix[j][i] / div, 2)
 
     return new_matrix
