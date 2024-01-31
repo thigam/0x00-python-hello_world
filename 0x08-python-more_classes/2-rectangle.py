@@ -2,6 +2,8 @@
 """
 Defines a rectangle class
 """
+
+
 class Rectangle:
     """
     A rectangle
@@ -13,10 +15,12 @@ class Rectangle:
         """Creates a new Rectangle instance"""
         self.__height = height
         self.__width = width
+
     @property
     def height(self):
         """Returns the height"""
         return self.__height
+
     @height.setter
     def height(self, value):
         """Sets a value for the height"""
@@ -25,10 +29,12 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
     @property
     def width(self):
         """Returns the width"""
         return self.__width
+
     @width.setter
     def width(self, value):
         """Sets a value for the width"""
@@ -37,11 +43,13 @@ class Rectangle:
         if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
+
     def area(self):
         """Returns the area"""
         return self.__width * self.__height
+
     def perimeter(self):
         """Returns the perimeter"""
         if self.__width == 0 or self.__height == 0:
             return 0
-        return (self.__width * 2) + (self.__height * 2) 
+        return (self.__width * 2) + (self.__height * 2)
