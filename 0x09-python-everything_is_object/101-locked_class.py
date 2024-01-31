@@ -4,5 +4,11 @@ A module containing a locked class
 """
 
 
-class LockedClass:
+class LockedClassParent:
+    """Parent class with attribute restriciton"""
     __slots__ = ('first_name')
+class LockedClass(LockedClassParent):
+    """
+    Empty class
+    """
+    __slots__ = ()
