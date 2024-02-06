@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Contains a function that writes an object to a text file using a JSOM representation
+Contains a function that writes an object to a text
+file using a JSOM representation
 """
 import json
 
