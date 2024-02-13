@@ -16,7 +16,7 @@ class Square_tests(unittest.TestCase):
     def test_str(self):
         """Tests the __str__() method"""
         sq = Square(5)
-        self.assertEqual(sq.__str__(), "[Square] (8) 0/0 - 5")
+        self.assertEqual(sq.__str__(), "[Square] (10) 0/0 - 5")
 
     def test_area(self):
         """Tests the area method()"""
@@ -49,3 +49,15 @@ class Square_tests(unittest.TestCase):
         sq.update(1, 2, 3, 4)
         sq.update(x=12)
         self.assertEqual(sq.__str__(), "[Square] (1) 12/4 - 2")
+
+    def test_to_dictionary(self):
+        """Tests the type produced by the to_dictionary method"""
+        sq = Square(10, 2, 1)
+        sq_1 = sq.to_dictionary()
+        self.assertIsInstance(sq_1, dict)
+
+    def test_to_dictionary_2(self):
+        """Tests the contents returned from to_dictionary method"""
+        sq = Square(10, 2, 1)
+        sq_1 =sq.to_dictionary()
+        self.assertEqual(sq_1, {'id': 12, 'x': 2, 'size': 10, 'y': 1})
