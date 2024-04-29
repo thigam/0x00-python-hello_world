@@ -11,9 +11,7 @@ def main():
     cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
     rows = cur.fetchall()
     for row in rows:
-        for col in row:
-            print("%s",col)
-        print("\n")
+        print(row)
 
 if __name__=="__main__":
     main()
