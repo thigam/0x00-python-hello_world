@@ -8,8 +8,7 @@ import sys
 def main():
     db = MySQLdb.connect(host="localhost", user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3], port=3306)
     cur = db.cursor()
-    search_word = sys.argv[4]
-    cur.execute("SELECT * FROM states WHERE name=%s", (search_word,))
+    cur.execute("SELECT cities.id, cities.name, states.name FROM cities JOIN states ON states.id=cities.state_id ORDER BY id")
     rows = cur.fetchall()
     for row in rows:
         print(row)
